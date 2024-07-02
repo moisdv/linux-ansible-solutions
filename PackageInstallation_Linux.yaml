@@ -1,0 +1,8 @@
+---
+ - name: POC Oracle Linux
+   hosts: all
+   become: true
+   tasks:
+
+    - name: Amazon Web Services Agents
+      shell: whoami
