@@ -4,11 +4,11 @@
    become: false
    tasks:
 
-     - name: prueba
-       oracle_sql:
-         mode: sysdba
-         sql: "SELECT * FROM v$version"
-       register: _oracle_dba_users
+    - name: prueba
+      oracle_sql:
+        mode: sysdba
+        sql: "SELECT * FROM v$version"
+      register: _oracle_dba_users
 
     # - name: Create "Employees" Data Base
     #   shell: echo 'CREATE DATA BASE employees;' | sqlplus / as sysdba
