@@ -7,8 +7,9 @@
    tasks:
    
     - name: install dependency
-      shell: pip install cx_Oracle
-      
+      ansible.builtin.pip:
+        name: cx_Oracle
+
     - name: execute oracle command
       ibre5041.ansible_oracle_modules.oracle_sql:
         mode: sysdba
