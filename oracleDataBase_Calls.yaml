@@ -4,8 +4,10 @@
    become: false
    tasks:
 
-    - name: Retrieve Data Base Version
-      shell: echo 'SELECT * FROM v$version;' | sqlplus / as sysdba
+    - oracle_sql:
+        mode: sysdba
+        sql: "SELECT * FROM v$version"
+      register: _oracle_dba_users
 
     # - name: Create "Employees" Data Base
     #   shell: echo 'CREATE DATA BASE employees;' | sqlplus / as sysdba
