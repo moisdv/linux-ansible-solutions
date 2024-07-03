@@ -5,8 +5,11 @@
    collections:
      - ibre5041.ansible_oracle_modules
    tasks:
-
-    - name: prueba
+   
+    - name: install dependency
+      shell: pip install cx_Oracle
+      
+    - name: execute oracle command
       ibre5041.ansible_oracle_modules.oracle_sql:
         mode: sysdba
         sql: "SELECT * FROM v$version"
