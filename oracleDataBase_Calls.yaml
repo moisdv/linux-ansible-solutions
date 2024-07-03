@@ -2,10 +2,12 @@
  - name: Commands Over Oracle Data Base
    hosts: all
    become: false
+   collections:
+     - ibre5041.ansible_oracle_modules
    tasks:
 
     - name: prueba
-      oracle_sql:
+      ibre5041.ansible_oracle_modules.oracle_sql:
         mode: sysdba
         sql: "SELECT * FROM v$version"
       register: _oracle_dba_users
