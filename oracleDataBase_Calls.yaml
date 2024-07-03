@@ -10,15 +10,12 @@
     - name: install dependency
       ansible.builtin.pip:
         name: cx_Oracle
-      become: true
-      become_user: ec2-user
 
     - name: execute oracle command
       ibre5041.ansible_oracle_modules.oracle_sql:
         mode: sysdba
         sql: "SELECT * FROM v$version"
       register: _oracle_dba_users
-      become: true
       become_user: oracle
 
     # - name: Create "Employees" Data Base
