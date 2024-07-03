@@ -1,0 +1,14 @@
+---
+ - name: Commands Over Oracle Data Base
+   hosts: all
+   become: false
+   tasks:
+
+    - name: Retrieve Data Base Version
+      shell: echo 'SELECT * FROM v$version;' | sqlplus / as sysdba
+
+    # - name: Create "Employees" Data Base
+    #   shell: echo 'CREATE DATA BASE employees;' | sqlplus / as sysdba
+
+    # - name: Create "Names" Table on "Employees" Data Base
+    #   shell: echo 'CREATE TABLE names(firstName varchar(255), lastName varchar(255));' | sqlplus / as sysdba
