@@ -1,4 +1,4 @@
 --- 
 collections:
 - name: ansible-oracle-modules
-  source: https://galaxy.ansible.com
+  source: /home/ansible/:/var/lib/awx/.ansible/collections/ansible_collections/ibre5041/ansible_oracle_modules
