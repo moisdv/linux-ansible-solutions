@@ -1,0 +1,4 @@
+--- 
+collections:
+- name: ansible-oracle-modules
+  source: https://galaxy.ansible.com
