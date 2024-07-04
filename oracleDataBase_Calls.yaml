@@ -15,6 +15,8 @@
       ibre5041.ansible_oracle_modules.oracle_sql:
         mode: sysdba
         sql: "SELECT * FROM v$version"
+        service_name: cdb1
+        oracle_home: /u01/app/oracle/product/19.0.0/dbhome_1/
       register: _oracle_dba_users
 
     # - name: Create "Employees" Data Base
