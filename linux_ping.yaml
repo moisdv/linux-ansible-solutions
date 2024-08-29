@@ -1,0 +1,9 @@
+---
+- name: Ping to Servers
+  hosts: all
+  gather_facts: true
+  become: true
+  tasks:
+
+    - name: ping to {{ ansible_facts['fdqn'] }} Hosts
+      ansible.builtin.ping:
